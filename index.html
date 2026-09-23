@@ -83,7 +83,7 @@ nav a:hover{color:var(--gold)}
 .center{text-align:center}
 .ig{font-size:15px;letter-spacing:.2em;text-transform:uppercase}
  
-.shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin:40px 0}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px;margin:40px 0}
 .product{display:flex;flex-direction:column;gap:16px}
 .product-info{display:flex;flex-direction:column;gap:6px}
 .product-info h3{font-size:24px}
@@ -131,7 +131,6 @@ footer div{display:flex;gap:28px}
   .arch{max-width:440px;width:100%;margin:0 auto}
   .menu{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,1fr)}
-  .shop-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:820px){
   .menu-btn{display:inline-flex}
@@ -145,7 +144,6 @@ footer div{display:flex;gap:28px}
   .brand-name b{font-size:20px}
   .hero-actions .btn{width:100%}
   .item{flex-direction:column;gap:8px}
-  .shop-grid{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -171,9 +169,9 @@ footer div{display:flex;gap:28px}
     </button>
     <nav id="site-nav" aria-label="Main">
       <ul>
-        <li><a href="#services">Pricing</a></li>
         <li><a href="#shop">Shop</a></li>
         <li><a href="#virtual">Virtual Wig Bar</a></li>
+        <li><a href="#ship">Shipping</a></li>
         <li><a class="btn btn-solid" href="#shop">Shop now</a></li>
       </ul>
     </nav>
@@ -202,78 +200,135 @@ footer div{display:flex;gap:28px}
     </div>
   </section>
  
-  <section id="services" class="section alt">
-    <div class="wrap">
-      <div class="head-row">
-        <div>
-          <span class="kicker">Price guide</span>
-          <h2>Collection</h2>
-        </div>
-        <p class="muted">All orders are paid in full at checkout and ship to your address.</p>
-      </div>
-      <div class="menu">
-        <div class="item"><div><h3>[Service name]</h3><p class="muted">[Short description · duration]</p></div><span class="price">[PRICE]</span></div>
-        <div class="item"><div><h3>[Service name]</h3><p class="muted">[Short description · duration]</p></div><span class="price">[PRICE]</span></div>
-        <div class="item"><div><h3>[Service name]</h3><p class="muted">[Short description · duration]</p></div><span class="price">[PRICE]</span></div>
-        <div class="item"><div><h3>[Service name]</h3><p class="muted">[Short description · duration]</p></div><span class="price">[PRICE]</span></div>
-        <div class="item"><div><h3>[Service name]</h3><p class="muted">[Short description · duration]</p></div><span class="price">[PRICE]</span></div>
-        <div class="item"><div><h3>[Service name]</h3><p class="muted">[Short description · duration]</p></div><span class="price">[PRICE]</span></div>
-      </div>
-    </div>
-  </section>
- 
-  <section id="shop" class="section">
+  <section id="shop" class="section alt">
     <div class="wrap">
       <span class="kicker">Ready to ship</span>
       <h2 style="margin-top:14px">Shop the collection</h2>
-      <p class="muted" style="margin-top:16px;max-width:560px">Every unit is paid in full at checkout and ships to your door. Prices and photos below are placeholders — replace with Candace's real units.</p>
+      <p class="muted" style="margin-top:16px;max-width:560px">Every unit is paid in full and ships to your door. To order, message Candace with the wig name — she'll confirm details and send a payment link.</p>
       <div class="shop-grid">
+ 
         <div class="product">
-          <div class="tile"><img src="[PHOTO_URL_1]" alt="[Wig name 1]" loading="lazy"></div>
+          <div class="tile"><img src="images/wig-01.jpg" alt="32 inch human hair lace front wig, straight" loading="lazy"></div>
           <div class="product-info">
-            <h3>[Wig name]</h3>
-            <p class="muted">[Length · texture · lace]</p>
+            <h3>32" Human Hair Lace Front Wig</h3>
+            <p class="muted">32" · Straight · 13x6 Lace</p>
             <div class="product-row">
-              <span class="price">[PRICE]</span>
-              <a class="btn btn-solid" href="[STRIPE_PAYMENT_LINK_1]" target="_blank" rel="noopener">Buy now</a>
+              <span class="price">$229</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="32&quot; Human Hair Lace Front Wig" data-price="$229">Order</button>
             </div>
           </div>
         </div>
+ 
         <div class="product">
-          <div class="tile"><img src="[PHOTO_URL_2]" alt="[Wig name 2]" loading="lazy"></div>
+          <div class="tile"><img src="images/wig-02.jpg" alt="Blonde kinky curly wig" loading="lazy"></div>
           <div class="product-info">
-            <h3>[Wig name]</h3>
-            <p class="muted">[Length · texture · lace]</p>
+            <h3>Blonde Kinky Curly Wig</h3>
+            <p class="muted">22" · Kinky Curly · 100% Human Hair</p>
             <div class="product-row">
-              <span class="price">[PRICE]</span>
-              <a class="btn btn-solid" href="[STRIPE_PAYMENT_LINK_2]" target="_blank" rel="noopener">Buy now</a>
+              <span class="price">$156</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Blonde Kinky Curly Wig" data-price="$156">Order</button>
             </div>
           </div>
         </div>
+ 
         <div class="product">
-          <div class="tile"><img src="[PHOTO_URL_3]" alt="[Wig name 3]" loading="lazy"></div>
+          <div class="tile"><img src="images/wig-03.jpg" alt="Ombre deep wave lace front wig" loading="lazy"></div>
           <div class="product-info">
-            <h3>[Wig name]</h3>
-            <p class="muted">[Length · texture · lace]</p>
+            <h3>Ombre Deep Wave Lace Front Wig</h3>
+            <p class="muted">30" · Deep Wave · Lace Front</p>
             <div class="product-row">
-              <span class="price">[PRICE]</span>
-              <a class="btn btn-solid" href="[STRIPE_PAYMENT_LINK_3]" target="_blank" rel="noopener">Buy now</a>
+              <span class="price">$220</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Ombre Deep Wave Lace Front Wig" data-price="$220">Order</button>
             </div>
           </div>
         </div>
+ 
         <div class="product">
-          <div class="tile"><img src="[PHOTO_URL_4]" alt="[Wig name 4]" loading="lazy"></div>
+          <div class="tile"><img src="images/wig-04.jpg" alt="Dark brown lace front bob wig" loading="lazy"></div>
           <div class="product-info">
-            <h3>[Wig name]</h3>
-            <p class="muted">[Length · texture · lace]</p>
+            <h3>Dark Brown Lace Front Bob Wig</h3>
+            <p class="muted">20" · Straight Bob · Lace Front</p>
             <div class="product-row">
-              <span class="price">[PRICE]</span>
-              <a class="btn btn-solid" href="[STRIPE_PAYMENT_LINK_4]" target="_blank" rel="noopener">Buy now</a>
+              <span class="price">$159</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Dark Brown Lace Front Bob Wig" data-price="$159">Order</button>
             </div>
           </div>
         </div>
+ 
+        <div class="product">
+          <div class="tile"><img src="images/wig-05.jpg" alt="Kinky curly lace front wig" loading="lazy"></div>
+          <div class="product-info">
+            <h3>Kinky Curly Lace Front Wig</h3>
+            <p class="muted">12" · Kinky Curly · Lace Front</p>
+            <div class="product-row">
+              <span class="price">$169</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Kinky Curly Lace Front Wig" data-price="$169">Order</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product">
+          <div class="tile"><img src="images/wig-06.jpg" alt="Honey blonde straight lace front wig" loading="lazy"></div>
+          <div class="product-info">
+            <h3>Honey Blonde Straight Lace Front Wig</h3>
+            <p class="muted">26" · Straight · 200% Density · Lace Front</p>
+            <div class="product-row">
+              <span class="price">$285</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Honey Blonde Straight Lace Front Wig" data-price="$285">Order</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product">
+          <div class="tile"><img src="images/wig-07.jpg" alt="Brown glueless lace front wig" loading="lazy"></div>
+          <div class="product-info">
+            <h3>Brown Glueless Lace Front Wig</h3>
+            <p class="muted">12" · 100% Human Hair · Glueless Lace Front</p>
+            <div class="product-row">
+              <span class="price">$143</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Brown Glueless Lace Front Wig" data-price="$143">Order</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product">
+          <div class="tile"><img src="images/wig-08.jpg" alt="Blonde straight lace front wig" loading="lazy"></div>
+          <div class="product-info">
+            <h3>Blonde Straight Lace Front Wig</h3>
+            <p class="muted">40" · Straight · 220% Density · Lace Front</p>
+            <div class="product-row">
+              <span class="price">$415</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Blonde Straight Lace Front Wig" data-price="$415">Order</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product">
+          <div class="tile"><img src="images/wig-09.jpg" alt="Black glueless lace front wig with a side part" loading="lazy"></div>
+          <div class="product-info">
+            <h3>Black Glueless Lace Front Wig</h3>
+            <p class="muted">20" · Side Part · Glueless Lace Front</p>
+            <div class="product-row">
+              <span class="price">$240</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Black Glueless Lace Front Wig" data-price="$240">Order</button>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="product">
+          <div class="tile"><img src="images/wig-10.jpg" alt="Wet and wavy lace front wig" loading="lazy"></div>
+          <div class="product-info">
+            <h3>Wet &amp; Wavy Lace Front Wig</h3>
+            <p class="muted">18" · Wet &amp; Wavy · Lace Front</p>
+            <div class="product-row">
+              <span class="price">$230</span>
+              <button type="button" class="btn btn-solid order-btn" data-name="Wet &amp; Wavy Lace Front Wig" data-price="$230">Order</button>
+            </div>
+          </div>
+        </div>
+ 
       </div>
-      <p class="center"><a class="ig" href="https://instagram.com/" target="_blank" rel="noopener">More on Instagram @[HANDLE]</a></p>
+      <p class="center"><a class="ig" href="https://instagram.com/candy_rain_214" target="_blank" rel="noopener">More on Instagram @candy_rain_214</a></p>
     </div>
   </section>
  
@@ -290,7 +345,7 @@ footer div{display:flex;gap:28px}
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="#C9A46A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>
-            <div><h3>2 · Pay in full at checkout</h3><p class="muted">Paste your specs into Stripe's order notes so Candace has everything she needs.</p></div>
+            <div><h3>2 · Send your specs</h3><p class="muted">Message Candace your build — she'll confirm price and send a payment link.</p></div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="#C9A46A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
@@ -337,8 +392,9 @@ footer div{display:flex;gap:28px}
           </div>
         </fieldset>
         <p class="summary muted" id="summary" aria-live="polite"></p>
-        <button type="button" class="btn btn-solid" id="order-custom">Order this custom unit</button>
+        <button type="button" class="btn btn-solid" id="order-custom">Send this custom order</button>
         <p class="form-note muted" id="order-note" aria-live="polite"></p>
+        <p class="form-note muted">Or DM your specs to <a href="https://instagram.com/candy_rain_214" target="_blank" rel="noopener">@candy_rain_214</a>.</p>
       </div>
     </div>
   </section>
@@ -348,16 +404,15 @@ footer div{display:flex;gap:28px}
       <div>
         <span class="kicker">Shipping &amp; payment</span>
         <h2 style="margin-top:14px">How orders work</h2>
-        <p class="muted" style="margin-top:22px;max-width:480px;line-height:1.8">Every order is paid in full at checkout through Stripe. We ship to [DOMESTIC / DOMESTIC + INTERNATIONAL] and orders go out within [X business days]. [All sales final / Exchange policy — one line].</p>
-        <address class="muted" style="margin-top:22px">Questions about an order?<br><a href="mailto:[EMAIL]">[EMAIL]</a> · <a href="https://instagram.com/" target="_blank" rel="noopener">@[HANDLE]</a></address>
+        <p class="muted" style="margin-top:22px;max-width:480px;line-height:1.8">Message the wig you want using the form or Instagram. Candace confirms details and sends a secure payment link — orders are paid in full before they ship. We ship to [DOMESTIC / DOMESTIC + INTERNATIONAL] and orders go out within [X business days]. [All sales final / Exchange policy — one line].</p>
+        <address class="muted" style="margin-top:22px">Questions about an order?<br><a href="mailto:[EMAIL]">[EMAIL]</a> · <a href="https://instagram.com/candy_rain_214" target="_blank" rel="noopener">@candy_rain_214</a></address>
       </div>
       <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <label>Name<input type="text" name="name" autocomplete="name" required></label>
         <label>Phone or email<input type="text" name="contact" autocomplete="email" required></label>
-        <label>Order number (if any)<input type="text" name="order"></label>
-        <label>Question<textarea name="message" rows="4" required></textarea></label>
+        <label>Wig / order details<textarea name="message" rows="4" required></textarea></label>
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-        <button type="submit" class="btn btn-solid">Send question</button>
+        <button type="submit" class="btn btn-solid">Send message</button>
         <p class="form-note muted" id="form-note" aria-live="polite"></p>
       </form>
     </div>
@@ -367,7 +422,7 @@ footer div{display:flex;gap:28px}
  
 <footer class="wrap">
   <span>© <span id="year"></span> Candace Beauty Care LLC</span>
-  <div><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="#ship">Shipping &amp; policies</a></div>
+  <div><a href="https://instagram.com/candy_rain_214" target="_blank" rel="noopener">Instagram</a><a href="#ship">Shipping &amp; policies</a><a href="https://atris.space" target="_blank" rel="noopener">Site by ATRIS</a></div>
 </footer>
  
 <script>
@@ -414,9 +469,18 @@ footer div{display:flex;gap:28px}
   render();
  
   var orderNote = document.getElementById('order-note');
+  document.querySelectorAll('.order-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var msg = document.querySelector('#contact-form textarea[name="message"]');
+      msg.value = 'I want to order: ' + btn.dataset.name + ' (' + btn.dataset.price + ')';
+      document.getElementById('ship').scrollIntoView();
+      document.querySelector('#contact-form input[name="name"]').focus({preventScroll:true});
+    });
+  });
+ 
   document.getElementById('order-custom').addEventListener('click', function(){
     var msg = document.querySelector('#contact-form textarea[name="message"]');
-    msg.value = 'Custom order request — ' + selection() + '. Please send a Stripe payment link for this unit.';
+    msg.value = 'Custom order request — ' + selection() + '. Please confirm price and send a payment link.';
     document.getElementById('ship').scrollIntoView();
     document.querySelector('#contact-form input[name="name"]').focus({preventScroll:true});
     orderNote.textContent = 'Specs added below — fill in your name and contact to send the request.';
